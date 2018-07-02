@@ -5,8 +5,12 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class Player : MonoBehaviour
 {
+    [Tooltip("In ms^-1")][SerializeField] float xSpeed = 4f;
+
     private void Update()
     {
-        float horizontalThrow = CrossPlatformInputManager.GetAxis("Horizontal");
+        float xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
+        float xOffsetThisFrame = xThrow * xSpeed * Time.deltaTime;
+        print(xOffsetThisFrame);
     }
 }
