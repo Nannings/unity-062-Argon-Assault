@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
@@ -10,6 +11,17 @@ public class Player : MonoBehaviour
     [Tooltip("In m")] [SerializeField] float yRange = 3f;
 
     private void Update()
+    {
+        ProcessTranslation();
+        ProcessRotation();
+    }
+
+    private void ProcessRotation()
+    {
+        transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
+    }
+
+    private void ProcessTranslation()
     {
         float xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
         float yThrow = CrossPlatformInputManager.GetAxis("Vertical");
