@@ -19,6 +19,11 @@ public class Player : MonoBehaviour
 
     private float xThrow, yThrow;
 
+    private void OnTriggerEnter(Collider collision)
+    {
+        print("player" + collision.name);
+    }
+
     private void Update()
     {
         ProcessTranslation();
