@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class Player : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     [Tooltip("In ms^-1")][SerializeField] float xSpeed = 20f;
     [Tooltip("In m")] [SerializeField] float xRange = 5f;
@@ -14,20 +14,23 @@ public class Player : MonoBehaviour
     [SerializeField] float controlPitchFactor = -20f;
 
     [SerializeField] float positionYawFactor = 5f;
-    //[SerializeField] float controlYawFactor = 30f;
     [SerializeField] float controlRollFactor = -20f;
 
     private float xThrow, yThrow;
-
-    private void OnTriggerEnter(Collider collision)
-    {
-        print("player" + collision.name);
-    }
+    bool isControlEnabled = true;
 
     private void Update()
     {
-        ProcessTranslation();
-        ProcessRotation();
+        if (isControlEnabled)
+        {
+            ProcessTranslation();
+            ProcessRotation();
+        }
+    }
+
+    private void OnPlayerDeath()
+    {
+        isControlEnabled = false;
     }
 
     private void ProcessRotation()
