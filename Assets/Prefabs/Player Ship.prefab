@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 198166835834661358}
   - component: {fileID: 199822151988176576}
   m_Layer: 0
-  m_Name: Bullets (1)
+  m_Name: Bullets Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 198437339234588524}
   - component: {fileID: 199803251935036154}
   m_Layer: 0
-  m_Name: Bullets
+  m_Name: Bullets Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
