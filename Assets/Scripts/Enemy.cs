@@ -6,10 +6,19 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] GameObject deathFX;
+    [SerializeField] int scorePerHit = 12;
 
     static Transform parent;
 
+    ScoreBoard scoreBoard;
+
     private void Start()
+    {
+        AddBoxCollider();
+        scoreBoard = FindObjectOfType<ScoreBoard>();
+    }
+
+    private void AddBoxCollider()
     {
         Collider boxCollider = gameObject.AddComponent<BoxCollider>();
         boxCollider.isTrigger = false;
@@ -25,5 +34,10 @@ public class Enemy : MonoBehaviour
         }
         FX.transform.SetParent(parent);
         Destroy(gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        scoreBoard.ScoreHit(scorePerHit);
     }
 }
