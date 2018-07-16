@@ -650,36 +650,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 198437339234588524, guid: e356f20bd97aa0b418eec77abe10bda0,
-        type: 2}
-      propertyPath: CollisionModule.enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 198166835834661358, guid: e356f20bd97aa0b418eec77abe10bda0,
-        type: 2}
-      propertyPath: CollisionModule.enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 198437339234588524, guid: e356f20bd97aa0b418eec77abe10bda0,
-        type: 2}
-      propertyPath: CollisionModule.type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 198166835834661358, guid: e356f20bd97aa0b418eec77abe10bda0,
-        type: 2}
-      propertyPath: CollisionModule.type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 198437339234588524, guid: e356f20bd97aa0b418eec77abe10bda0,
-        type: 2}
-      propertyPath: CollisionModule.collisionMessages
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 198166835834661358, guid: e356f20bd97aa0b418eec77abe10bda0,
-        type: 2}
-      propertyPath: CollisionModule.collisionMessages
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e356f20bd97aa0b418eec77abe10bda0, type: 2}
   m_IsPrefabAsset: 0
@@ -1177,7 +1147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e58f7a0f010d642b865c4d72894b14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreHit: 12
 --- !u!1 &1840871955
 GameObject:
   m_ObjectHideFlags: 0
